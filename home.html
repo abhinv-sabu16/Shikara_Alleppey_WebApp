@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Custom Animations */
+        .fade-in { animation: fadeIn 1s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Icon Animation */
+        .hidden-icons {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .show-icons {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <h1 class="text-xl font-bold">Shikara Alleppey</h1>
+    
+            <!-- Desktop Navbar -->
+            <ul class="hidden md:flex space-x-6 ml-auto">
+                <li><a href="#" class="hover:text-blue-500 transition-colors">Home</a></li>
+                <li><a href="#" class="hover:text-blue-500 transition-colors">About</a></li>
+                <li><a href="#" class="hover:text-blue-500 transition-colors">Services</a></li>
+                <li><a href="#" class="hover:text-blue-500 transition-colors">Contact</a></li>
+            </ul>
+    
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-xl focus:outline-none ml-auto">
+                &#9776;
+            </button>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden flex flex-col space-y-4 p-4 bg-white md:hidden">
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Services</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="h-screen flex flex-col justify-center items-center text-center fade-in">
+        <h2 class="text-4xl md:text-6xl font-extrabold">Welcome to Our Website</h2>
+        <p class="text-lg md:text-xl mt-4 max-w-lg">We offer amazing services to help you succeed.</p>
+        <a href="#" class="mt-6 bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors">Get Started</a>
+    </header>
+    
+    <!-- Features Section -->
+    <section class="container mx-auto py-16 px-6 grid md:grid-cols-3 gap-8 text-center">
+        <div class="p-6 bg-white shadow-lg rounded-lg hover:scale-105 transition-transform text-center">
+            <img src="sunrise-shikara.jpg" alt="Sunrise Shikara" class="w-full h-48 object-cover rounded-lg mb-4">
+
+            <h3 class="text-xl font-bold">Sunrise Shikara Ride</h3>
+            <p class="mt-2 text-gray-600">
+                <strong>Time:</strong> 6:00 am to 9:00 am<br>
+                <strong>Description:</strong> Enjoy a mesmerizing early morning cruise to witness the sunrise over the backwaters.
+            </p>
+        </div>
+        
+        <div class="p-6 bg-white shadow-lg rounded-lg hover:scale-105 transition-transform text-center">
+            <img src="lunch-shikara.jpg" alt="Lunch Shikara Ride" class="w-full h-48 object-cover rounded-lg mb-4">
+
+            <h3 class="text-xl font-bold">Lunch Shikara Ride</h3>
+            <p class="mt-2 text-gray-600">
+                <strong>Time:</strong>12:00 pm to 3:00 pm<br>
+                <strong>Description:</strong>Savor a fabulous meal prepared in traditional style while cruising through the serene waters.
+            </p>
+        </div>
+        <div class="p-6 bg-white shadow-lg rounded-lg hover:scale-105 transition-transform text-center">
+            <img src="ful-day.jpg" alt="Full-Day Shikara Ride" class="w-full h-48 object-cover rounded-lg mb-4">
+
+            <h3 class="text-xl font-bold">Full-Day Shikara Ride</h3>
+            <p class="mt-2 text-gray-600">
+                <strong>Time:</strong>6:00 am to 2:00 pm<br>
+                <strong>Description:</strong>A complete day of adventure with breakfast, lunch, and sightseeing.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <div id="social-icons" class="mb-4 flex justify-center space-x-6 hidden-icons">
+            <a href="#" class="text-white text-2xl hover:text-blue-400 transition-colors">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="text-white text-2xl hover:text-blue-400 transition-colors">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-white text-2xl hover:text-pink-500 transition-colors">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-white text-2xl hover:text-red-600 transition-colors">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="text-white text-2xl hover:text-blue-700 transition-colors">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 Brand. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Intersection Observer to reveal icons on scroll (triggers every time)
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show-icons');
+                } else {
+                    entry.target.classList.remove('show-icons'); // Hide icons when scrolled away
+                }
+            });
+        });
+                observer.observe(document.getElementById('social-icons'));
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
+
+        menuButton.addEventListener("click", function () {
+            menu.classList.toggle("hidden");
+        });
+    });
+    </script>
+</body>
+</html>
