@@ -62,14 +62,14 @@
     </nav>
     
     <!-- Hero Section -->
-  
-    <header class="relative h-screen flex flex-col justify-center items-center text-center fade-in">
-        <img src="bgimg.jpg" alt="Alleppey Backwaters" class="absolute inset-0 w-full h-full object-cover z-0" />
-        <div class="bg-black bg-opacity-50 p-6 rounded-lg z-10">
+    <header class="relative h-screen flex flex-col justify-center items-center text-center fade-in bg-cover bg-center" style="background-image: url('bgimg.jpg');">
+        <div class="bg-black bg-opacity-50 p-6 rounded-lg z-10 text-center"> <!-- Added text-center here -->
             <h2 class="text-4xl md:text-6xl font-extrabold text-white">Experience the Serenity of Alleppey in a Shikara</h2>
-            <p class="text-lg md:text-xl mt-4 max-w-lg text-white">We offer amazing services to help you succeed.</p>
-            <a href="#" class="mt-6 bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors">Book Your Ride Now</a>
+            <p class="text-sm md:text-base mt-4 max-w-lg text-white"> <!-- Removed text-center from here -->
+                Glide through the tranquil backwaters of Alleppey on a traditional Shikara, where every stroke of the oar unveils a tapestry of lush greenery and vibrant life. As you drift along the serene waters, immerse yourself in the breathtaking beauty of swaying palm trees, charming villages, and the gentle sounds of nature. Witness the mesmerizing sunrise or sunset painting the sky in hues of gold and crimson, while savoring authentic local delicacies prepared just for you. Whether it's a romantic escape, a family adventure, or a peaceful retreat, an Alleppey Shikara ride promises unforgettable memories and a deep connection with the enchanting landscape of Kerala. Experience the serenity, embrace the culture, and let the magic of Alleppey captivate your soul!
+            </p>
         </div>
+        <a href="#" class="mt-6 bg-green-500 text-white px-8 py-4 rounded-full hover:bg-green-600 transition-colors z-10">Book Your Ride Now</a>
     </header>
     
     <!-- Features Section -->
@@ -89,8 +89,8 @@
 
             <h3 class="text-xl font-bold">Lunch Shikara Ride</h3>
             <p class="mt-2 text-gray-600">
-                <strong>Time:</strong>12:00 pm to 3:00 pm<br>
-                <strong>Description:</strong>Savor a fabulous meal prepared in traditional style while cruising through the serene waters.
+                <strong>Time:</strong> 12:00 pm to 3:00 pm<br>
+                <strong>Description:</strong> Savor a fabulous meal prepared in traditional style while cruising through the serene waters.
             </p>
         </div>
         <div class="p-6 bg-white shadow-lg rounded-lg hover:scale-105 transition-transform text-center">
@@ -98,8 +98,8 @@
 
             <h3 class="text-xl font-bold">Full-Day Shikara Ride</h3>
             <p class="mt-2 text-gray-600">
-                <strong>Time:</strong>6:00 am to 2:00 pm<br>
-                <strong>Description:</strong>A complete day of adventure with breakfast, lunch, and sightseeing.
+                <strong>Time:</strong> 6:00 am to 2:00 pm<br>
+                <strong>Description:</strong> A complete day of adventure with breakfast, lunch, and sightseeing.
             </p>
         </div>
     </section>
@@ -137,16 +137,16 @@
                 }
             });
         });
-                observer.observe(document.getElementById('social-icons'));
+        observer.observe(document.getElementById('social-icons'));
 
         document.addEventListener("DOMContentLoaded", function () {
-        const menuButton = document.getElementById("menu-btn");
-        const menu = document.getElementById("mobile-menu");
+            const menuButton = document.getElementById("menu-btn");
+            const menu = document.getElementById("mobile-menu");
 
-        menuButton.addEventListener("click", function () {
-            menu.classList.toggle("hidden");
+            menuButton.addEventListener("click", function () {
+                menu.classList.toggle("hidden");
+            });
         });
-    });
     </script>
 </body>
 </html>
