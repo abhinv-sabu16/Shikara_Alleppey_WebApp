@@ -47,6 +47,17 @@
             padding: 20px;
             color: white;
         }
+        
+        .hidden-icons {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .show-icons {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
     </style>
 </head>
 <body>
@@ -58,8 +69,8 @@
     
             <!-- Desktop Navbar -->
             <ul class="hidden md:flex space-x-6 ml-auto">
-                <li><a href="#" class="hover:text-blue-500 transition-colors">Home</a></li>
-                <li><a href="#" class="hover:text-blue-500 transition-colors">About</a></li>
+                <li><a href="home.html" class="hover:text-blue-500 transition-colors">Home</a></li>
+                <li><a href="aboutus.html" class="hover:text-blue-500 transition-colors">About</a></li>
                 
                 <!-- Services Dropdown -->
                 <li class="relative group">
@@ -160,11 +171,45 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-white text-center py-6">
-        <p class="text-gray-400">&copy; 2025 Shikara Alleppey. All rights reserved.</p>
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <div id="social-icons" class="mb-4 flex justify-center space-x-6 hidden-icons" style="padding: 20px 0;">
+            <a href="#" class="text-white text-2xl hover:text-blue-400 transition-colors">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="text-white text-2xl hover:text-blue-400 transition-colors">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-white text-2xl hover:text-pink-500 transition-colors">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-white text-2xl hover:text-red-600 transition-colors">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" class="text-white text-2xl hover:text-blue-700 transition-colors">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 Shikara Alleppey. All rights reserved.</p>
+
     </footer>
 
+
     <script>
+       // Intersection Observer to reveal icons on scroll (triggers every time)
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                console.log('Intersection observed:', entry.isIntersecting);
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show-icons');
+                } else {
+                    entry.target.classList.remove('show-icons'); // Hide icons when scrolled away
+                }
+            });
+        });
+        console.log('Observer is set up for #social-icons');
+        observer.observe(document.getElementById('social-icons'));
+
+
         // Fade-in effect on scroll
         document.addEventListener("DOMContentLoaded", function () {
             const fadeElements = document.querySelectorAll(".fade-in");
