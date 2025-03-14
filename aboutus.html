@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts - Roboto Slab -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto Slab', serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Black Sections */
+        .black-section {
+            background: #000000;
+            color: white;
+            padding: 100px 0;
+        }
+
+        /* Glassmorphism Effect */
+        .glassmorphism {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <h1 class="text-xl font-bold">Shikara Alleppey</h1>
+    
+            <!-- Desktop Navbar -->
+            <ul class="hidden md:flex space-x-6 ml-auto">
+                <li><a href="#" class="hover:text-blue-500 transition-colors">Home</a></li>
+                <li><a href="#" class="hover:text-blue-500 transition-colors">About</a></li>
+                
+                <!-- Services Dropdown -->
+                <li class="relative group">
+                    <a href="#" class="hover:text-blue-500 transition-colors">Services</a>
+                    
+                    <!-- Dropdown Menu -->
+                    <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg border hidden group-hover:block">
+                        <li><a href="shikara.html" class="block px-4 py-2 hover:bg-gray-100">Shikara</a></li>
+                        <li><a href="houseboat.html" class="block px-4 py-2 hover:bg-gray-100">Houseboat</a></li>
+                        <li><a href="speedboat.html" class="block px-4 py-2 hover:bg-gray-100">Speed Boat</a></li>
+                        <li><a href="kayaking.html" class="block px-4 py-2 hover:bg-gray-100">Kayaking</a></li>
+                        <li><a href="taxi.html" class="block px-4 py-2 hover:bg-gray-100">Taxi</a></li>
+                    </ul>
+                </li>
+    
+                <li><a href="#" class="hover:text-blue-500 transition-colors">Contact</a></li>
+            </ul>
+    
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-xl focus:outline-none ml-auto">
+                &#9776;
+            </button>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden flex flex-col space-y-4 p-4 bg-white md:hidden">
+            <li><a href="home.html" class="hover:text-blue-500 transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition-colors">About</a></li>
+    
+            <!-- Mobile Services Dropdown -->
+            <li>
+                <button id="mobile-services-btn" class="w-full text-left hover:text-blue-500 transition-colors">
+                    Services ⌵
+                </button>
+                <ul id="mobile-services-menu" class="hidden flex flex-col space-y-2 pl-4">
+                    <li><a href="shikara.html" class="hover:text-blue-500">Shikara</a></li>
+                    <li><a href="houseboat.html" class="hover:text-blue-500">Houseboat</a></li>
+                    <li><a href="speedboat.html" class="hover:text-blue-500">Speed Boat</a></li>
+                    <li><a href="kayaking.html" class="hover:text-blue-500">Kayaking</a></li>
+                    <li><a href="taxi.html" class="hover:text-blue-500">Taxi</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center items-center text-center fade-in">
+        <div class="glassmorphism max-w-3xl text-center">
+            <h2 class="text-5xl font-bold">About Us</h2>
+            <p class="text-lg mt-4">
+                We are a group of people who want to give you the best experience with Alleppey Shikara boats. With many years of experience, we are now the best choice for Alleppey Shikara rides. Discovery of Alleppey can be one of the most beautiful moments in life. We know what travelers need and provide the best service. Alleppey Shikara brings tourists in touch with expert professionals who are confident and can handle tough situations. Our experience helps us to know what you want and provides you with a vacation that you will never forget. We promise to give the best customer experience in a professional and responsible way. After years of hard work, ethics, and honesty, Alleppey Shikara is one of the most trusted tourism names in Alleppey
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container mx-auto py-24 px-6 fade-in text-center">
+        <h3 class="text-4xl font-bold mb-6">Our Story</h3>
+        <p class="text-gray-800 max-w-3xl mx-auto">
+            Our journey started with a vision to redefine boat rides. With years of expertise, 
+            we have become the leading provider of luxury Shikara boat experiences in Alleppey.
+        </p>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="black-section fade-in text-center">
+        <div class="glassmorphism max-w-2xl mx-auto">
+            <h3 class="text-3xl font-bold mb-4">Our Mission</h3>
+            <p class="text-gray-300">
+                Our goal is to offer a futuristic, eco-friendly, and safe boat experience. 
+                We merge modern innovation with Kerala’s timeless beauty.
+            </p>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="container mx-auto py-16 px-6 text-center fade-in">
+        <h3 class="text-3xl font-bold mb-6">Why Choose Us?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-6 bg-black text-white rounded-lg shadow-lg hover:scale-105 transition-transform">
+                <i class="fas fa-ship text-4xl text-blue-400 mb-4"></i>
+                <h4 class="text-xl font-semibold">Smart Boats</h4>
+                <p class="text-gray-400">AI-powered boats for a seamless journey.</p>
+            </div>
+            <div class="p-6 bg-black text-white rounded-lg shadow-lg hover:scale-105 transition-transform">
+                <i class="fas fa-tags text-4xl text-green-400 mb-4"></i>
+                <h4 class="text-xl font-semibold">Affordable Luxury</h4>
+                <p class="text-gray-400">Transparent pricing with premium experiences.</p>
+            </div>
+            <div class="p-6 bg-black text-white rounded-lg shadow-lg hover:scale-105 transition-transform">
+                <i class="fas fa-user-tie text-4xl text-red-400 mb-4"></i>
+                <h4 class="text-xl font-semibold">Expert Crew</h4>
+                <p class="text-gray-400">Trained professionals ensuring safety and comfort.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center py-6">
+        <p class="text-gray-400">&copy; 2025 Shikara Alleppey. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fade-in effect on scroll
+        document.addEventListener("DOMContentLoaded", function () {
+            const fadeElements = document.querySelectorAll(".fade-in");
+            
+            function checkScroll() {
+                fadeElements.forEach(element => {
+                    const position = element.getBoundingClientRect().top;
+                    if (position < window.innerHeight - 50) {
+                        element.classList.add("show");
+                    }
+                });
+            }
+            
+            window.addEventListener("scroll", checkScroll);
+            checkScroll();
+        });
+    </script>
+
+</body>
+</html>
