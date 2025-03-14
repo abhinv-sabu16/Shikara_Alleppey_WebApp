@@ -230,6 +230,61 @@
         <p>&copy; 2025 Brand. All rights reserved.</p>
     </footer>
 
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <h1 class="text-xl font-bold">Shikara Alleppey</h1>
+    
+            <!-- Desktop Navbar -->
+            <ul class="hidden md:flex space-x-6 ml-auto">
+                <li><a href="#" class="hover:text-blue-500 transition-colors">Home</a></li>
+                <li><a href="#" class="hover:text-blue-500 transition-colors">About</a></li>
+                
+                <!-- Services Dropdown -->
+                <li class="relative group">
+                    <a href="#" class="hover:text-blue-500 transition-colors">Services</a>
+                    
+                    <!-- Dropdown Menu -->
+                    <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg border hidden group-hover:block">
+                        <li><a href="shikara.html" class="block px-4 py-2 hover:bg-gray-100">Shikara</a></li>
+                        <li><a href="houseboat.html" class="block px-4 py-2 hover:bg-gray-100">Houseboat</a></li>
+                        <li><a href="speedboat.html" class="block px-4 py-2 hover:bg-gray-100">Speed Boat</a></li>
+                        <li><a href="kayaking.html" class="block px-4 py-2 hover:bg-gray-100">Kayaking</a></li>
+                        <li><a href="taxi.html" class="block px-4 py-2 hover:bg-gray-100">Taxi</a></li>
+                    </ul>
+                </li>
+    
+                <li><a href="#" class="hover:text-blue-500 transition-colors">Contact</a></li>
+            </ul>
+    
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-xl focus:outline-none ml-auto">
+                &#9776;
+            </button>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden flex flex-col space-y-4 p-4 bg-white md:hidden">
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-blue-500 transition-colors">About</a></li>
+    
+            <!-- Mobile Services Dropdown -->
+            <li>
+                <button id="mobile-services-btn" class="w-full text-left hover:text-blue-500 transition-colors">
+                    Services ⌵
+                </button>
+                <ul id="mobile-services-menu" class="hidden flex flex-col space-y-2 pl-4">
+                    <li><a href="shikara.html" class="hover:text-blue-500">Shikara</a></li>
+                    <li><a href="houseboat.html" class="hover:text-blue-500">Houseboat</a></li>
+                    <li><a href="speedboat.html" class="hover:text-blue-500">Speed Boat</a></li>
+                    <li><a href="kayaking.html" class="hover:text-blue-500">Kayaking</a></li>
+                    <li><a href="taxi.html" class="hover:text-blue-500">Taxi</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="#" class="hover:text-blue-500 transition-colors">Contact</a></li>
+        </ul>
+    </nav>
+    
     <script>
         // Intersection Observer to reveal icons on scroll (triggers every time)
         const observer = new IntersectionObserver(entries => {
@@ -242,23 +297,24 @@
             });
         });
         observer.observe(document.getElementById('social-icons'));
-
+    
         document.addEventListener("DOMContentLoaded", function () {
             const menuButton = document.getElementById("menu-btn");
             const menu = document.getElementById("mobile-menu");
-
+            const servicesButton = document.getElementById("mobile-services-btn");
+            const servicesMenu = document.getElementById("mobile-services-menu");
+    
+            // Toggle mobile menu
             menuButton.addEventListener("click", function () {
                 menu.classList.toggle("hidden");
             });
+    
+            // Toggle services dropdown in mobile menu
+            servicesButton.addEventListener("click", function () {
+                servicesMenu.classList.toggle("hidden");
+            });
         });
-
-        // Toggle services dropdown in mobile menu
-        servicesButton.addEventListener("click", function () {
-            servicesMenu.classList.toggle("hidden");
-        });
-
-
-
     </script>
+    
 </body>
 </html>
