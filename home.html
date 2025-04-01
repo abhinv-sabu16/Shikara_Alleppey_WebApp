@@ -37,6 +37,15 @@
         body {
             font-family: 'Roboto Slab', serif; /* Set the default font to Roboto Slab */
         }
+
+        @keyframes glowing {
+        0% { opacity: 0.5; }
+        50% { opacity: 1; }
+        100% { opacity: 0.5; }
+    }
+    .animate-glow {
+        animation: glowing 2s infinite alternate;
+    }
     </style>
 
 
