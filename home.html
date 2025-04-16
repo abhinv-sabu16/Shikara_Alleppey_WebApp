@@ -15,30 +15,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Custom Animations */
-        .fade-in { animation: fadeIn 1s ease-in-out; }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+    /* Base Styles */
+    body {
+        font-family: 'Roboto Slab', serif; /* Set the default font */
+    }
 
-        /* Icon Animation */
-        .hidden-icons {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .show-icons {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    /* Custom Animations */
+    .fade-in {
+        animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
 
-       /* Apply the Slab Serif font */
-        body {
-            font-family: 'Roboto Slab', serif; /* Set the default font to Roboto Slab */
-        }
+    /* Icon Animation */
+    .hidden-icons {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .show-icons {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-        @keyframes glowing {
+    /* Glowing Animation */
+    @keyframes glowing {
         0% { opacity: 0.5; }
         50% { opacity: 1; }
         100% { opacity: 0.5; }
@@ -46,11 +49,14 @@
     .animate-glow {
         animation: glowing 2s infinite alternate;
     }
+    
+
+    
     </style>
 
 
         
-    </style>
+   
 </head>
 <body class="bg-gray-100 text-gray-900">
 
@@ -125,15 +131,28 @@
     
     <!-- Features Section -->
     <section class="container mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <!-- Sunrise Shikara Ride -->
-        <div class="p-10 bg-white shadow-lg rounded-lg hover:scale-105 transition-transform text-center flex flex-col justify-center min-h-screen md:min-h-[500px]">
+
+        <!-- Shikara Ride -->
+        <div class="p-10 bg-white shadow-lg rounded-lg hover:scale-105 transition-transform text-center flex flex-col justify-between min-h-screen md:min-h-[500px]">
             <img src="sunrise-shikara.webp" alt="Sunrise Shikara" class="w-full h-96 object-cover rounded-lg mb-6">
-            <h3 class="text-2xl font-bold">Sunrise Shikara Ride</h3>
-            <p class="text-gray-600">
-                <strong>Time:</strong> 6:00 am to 9:00 am<br>
-                <strong>Description:</strong> Enjoy a mesmerizing early morning cruise to witness the sunrise over the backwaters.
+            
+            <div class="flex-grow">
+                <h3 class="text-2xl font-bold">🚣‍♂️ Shikara Ride</h3>
+                <p class="text-gray-600 mt-2">
+                    Ideal for couples and families, our shikara rides offer a scenic escape through palm-lined canals. Enjoy photo stops, cultural sights, and peaceful vibes while gently cruising the serene waters of Alappuzha.
+                </p>
+            </div>
+        
+            <!-- Interactive Phrase -->
+            <p class="mt-6 text-gray-700">
+                Ready for a tranquil journey? 
+                <a href="shikara.html" class="text-blue-600 font-semibold hover:underline transition duration-300">
+                    <span class="inline-block animate-glow">Click here  to dive into our Shikara rides.</span>
+                </a>
             </p>
+            
         </div>
+        
     
         <!-- Lunch Shikara Ride -->
         <div class="p-10 bg-white shadow-lg rounded-lg hover:scale-105 transition-transform text-center flex flex-col justify-center min-h-screen md:min-h-[500px]">
@@ -156,87 +175,88 @@
         </div>
     </section>
 
-<!-- Why Choose Us Section -->
-<section class="container mx-auto py-8 px-4">
-    <div class="text-center mb-10">
-      <h2 class="text-3xl font-bold tracking-tight">Why Choose Us?</h2>
-    </div>
-  
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- 1 -->
-      <div class="bg-gradient-to-br from-blue-100 to-white p-5 rounded-2xl shadow-md transform rotate-1 hover:rotate-0 transition">
-        <i class="fas fa-map-marker-alt text-3xl text-blue-500 mb-2"></i>
-        <h3 class="text-md font-semibold">Locally Owned & Operated</h3>
-      </div>
-  
-      <!-- 2 -->
-      <div class="bg-gradient-to-tr from-yellow-100 to-white p-5 rounded-xl shadow-lg transform -rotate-1 hover:rotate-0 transition">
-        <i class="fas fa-route text-3xl text-yellow-500 mb-2"></i>
-        <h3 class="text-md font-semibold">Expert Sightseeing & Tours</h3>
-      </div>
-  
-      <!-- 3 -->
-      <div class="bg-gradient-to-br from-green-100 to-white p-5 rounded-3xl shadow-md transform rotate-2 hover:rotate-0 transition">
-        <i class="fas fa-headset text-3xl text-green-500 mb-2"></i>
-        <h3 class="text-md font-semibold">24x7 Availability</h3>
-      </div>
-  
-      <!-- 4 -->
-      <div class="bg-gradient-to-br from-red-100 to-white p-5 rounded-xl shadow-md transform -rotate-2 hover:rotate-0 transition">
-        <i class="fas fa-water text-3xl text-red-500 mb-2"></i>
-        <h3 class="text-md font-semibold">Wide Range of Services</h3>
-      </div>
-  
-      <!-- 5 -->
-      <div class="bg-gradient-to-tr from-gray-100 to-white p-5 rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition">
-        <i class="fas fa-star text-3xl text-yellow-400 mb-2"></i>
-        <h3 class="text-md font-semibold">5-Star Guest Ratings</h3>
-      </div>
-  
-      <!-- 6 -->
-      <div class="bg-gradient-to-tl from-indigo-100 to-white p-5 rounded-3xl shadow-md transform -rotate-3 hover:rotate-0 transition">
-        <i class="fas fa-ship text-3xl text-indigo-500 mb-2"></i>
-        <h3 class="text-md font-semibold">Clean, Safe & Verified Boats</h3>
-      </div>
-  
-      <!-- 7 -->
-      <div class="bg-gradient-to-br from-pink-100 to-white p-5 rounded-xl shadow-md transform rotate-1 hover:rotate-0 transition">
-        <i class="fas fa-id-card-alt text-3xl text-pink-500 mb-2"></i>
-        <h3 class="text-md font-semibold">Licensed & Government-Approved Boats</h3>
-      </div>
-  
-      <!-- 8 -->
-      <div class="bg-gradient-to-tr from-blue-100 to-white p-5 rounded-2xl shadow-lg transform -rotate-1 hover:rotate-0 transition">
-        <i class="fas fa-pen-nib text-3xl text-blue-500 mb-2"></i>
-        <h3 class="text-md font-semibold">Custom Itineraries</h3>
-      </div>
-  
-      <!-- 9 -->
-      <div class="bg-gradient-to-br from-gray-100 to-white p-5 rounded-3xl shadow-md transform rotate-2 hover:rotate-0 transition">
-        <i class="fas fa-rupee-sign text-3xl text-black mb-2"></i>
-        <h3 class="text-md font-semibold">Transparent Pricing</h3>
-      </div>
-  
-      <!-- 10 -->
-      <div class="bg-gradient-to-tr from-green-100 to-white p-5 rounded-xl shadow-md transform -rotate-2 hover:rotate-0 transition">
-        <i class="fas fa-camera text-3xl text-green-700 mb-2"></i>
-        <h3 class="text-md font-semibold">Photography Friendly Tours</h3>
-      </div>
-  
-      <!-- 11 -->
-      <div class="bg-gradient-to-tl from-lime-100 to-white p-5 rounded-2xl shadow-md transform rotate-3 hover:rotate-0 transition">
-        <i class="fas fa-leaf text-3xl text-lime-500 mb-2"></i>
-        <h3 class="text-md font-semibold">Eco-Friendly Canoe & Kayak Options</h3>
-      </div>
-  
-      <!-- 12 -->
-      <div class="bg-gradient-to-tr from-orange-100 to-white p-5 rounded-3xl shadow-lg transform -rotate-3 hover:rotate-0 transition">
-        <i class="fas fa-language text-3xl text-orange-500 mb-2"></i>
-        <h3 class="text-md font-semibold">Multi-Language Support</h3>
-      </div>
-    </div>
-  </section>
-  
+    <section class="bg-white py-12">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold">Why Choose <span class="text-red-500">Us</span></h2>
+        </div>
+      
+        <div class="max-w-7xl mx-auto grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 px-4">
+          
+          <!-- 1 -->
+          <div class="bg-white shadow-md rounded-lg p-6 text-center hexagon-shape">
+            <i class="fas fa-map-marker-alt text-3xl text-red-400 mb-3"></i>
+            <h3 class="font-semibold">Locally Owned & Operated</h3>
+          </div>
+      
+          <!-- 2 -->
+          <div class="bg-white shadow-md rounded-lg p-6 text-center hexagon-shape">
+            <i class="fas fa-route text-3xl text-red-400 mb-3"></i>
+            <h3 class="font-semibold">Expert Sightseeing & Tours</h3>
+          </div>
+      
+          <!-- 3 -->
+          <div class="bg-white shadow-md rounded-lg p-6 text-center hexagon-shape">
+            <i class="fas fa-headset text-3xl text-red-400 mb-3"></i>
+            <h3 class="font-semibold">24x7 Availability</h3>
+          </div>
+      
+          <!-- 4 -->
+          <div class="bg-white shadow-md rounded-lg p-6 text-center hexagon-shape">
+            <i class="fas fa-water text-3xl text-red-400 mb-3"></i>
+            <h3 class="font-semibold">Wide Range of Services</h3>
+          </div>
+      
+          <!-- 5 -->
+          <div class="bg-white shadow-md rounded-lg p-6 text-center hexagon-shape">
+            <i class="fas fa-star text-3xl text-red-400 mb-3"></i>
+            <h3 class="font-semibold">5-Star Guest Ratings</h3>
+          </div>
+      
+          <!-- 6 -->
+          <div class="bg-white shadow-md rounded-lg p-6 text-center hexagon-shape">
+            <i class="fas fa-ship text-3xl text-red-400 mb-3"></i>
+            <h3 class="font-semibold">Clean, Safe & Verified Boats</h3>
+          </div>
+      
+          <!-- 7 -->
+          <div class="bg-white shadow-md rounded-lg p-6 text-center hexagon-shape">
+            <i class="fas fa-id-card-alt text-3xl text-red-400 mb-3"></i>
+            <h3 class="font-semibold">Licensed & Govt-Approved</h3>
+          </div>
+      
+          <!-- 8 -->
+          <div class="bg-white shadow-md rounded-lg p-6 text-center hexagon-shape">
+            <i class="fas fa-pen-nib text-3xl text-red-400 mb-3"></i>
+            <h3 class="font-semibold">Custom Itineraries</h3>
+          </div>
+      
+          <!-- 9 -->
+          <div class="bg-white shadow-md rounded-lg p-6 text-center hexagon-shape">
+            <i class="fas fa-hand-holding-usd text-3xl text-red-400 mb-3"></i>
+            <h3 class="font-semibold">Transparent Pricing</h3>
+          </div>
+      
+          <!-- 10 -->
+          <div class="bg-white shadow-md rounded-lg p-6 text-center hexagon-shape">
+            <i class="fas fa-camera text-3xl text-red-400 mb-3"></i>
+            <h3 class="font-semibold">Photography Friendly Tours</h3>
+          </div>
+      
+          <!-- 11 -->
+          <div class="bg-white shadow-md rounded-lg p-6 text-center hexagon-shape">
+            <i class="fas fa-leaf text-3xl text-red-400 mb-3"></i>
+            <h3 class="font-semibold">Eco-Friendly Canoe & Kayak</h3>
+          </div>
+      
+          <!-- 12 -->
+          <div class="bg-white shadow-md rounded-lg p-6 text-center hexagon-shape">
+            <i class="fas fa-language text-3xl text-red-400 mb-3"></i>
+            <h3 class="font-semibold">Multi-Language Support</h3>
+          </div>
+        </div>
+      </section>
+      
+      
 
 
 
