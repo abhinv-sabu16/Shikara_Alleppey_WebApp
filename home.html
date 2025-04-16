@@ -49,8 +49,32 @@
     .animate-glow {
         animation: glowing 2s infinite alternate;
     }
-    
 
+    @keyframes heartbeat {
+    0% { 
+        transform: scale(1);
+        color: white;
+    }
+    25% { 
+        transform: scale(1.1);
+        color: #25D366; /* WhatsApp green */
+    }
+    50% { 
+        transform: scale(1);
+        color: white;
+    }
+    75% { 
+        transform: scale(1.1);
+        color: #25D366; /* WhatsApp green */
+    }
+    100% { 
+        transform: scale(1);
+        color: white;
+    }
+    }
+    .animate-heartbeat {
+    animation: heartbeat 1.5s ease-in-out infinite;
+    }
     
     </style>
 
@@ -268,12 +292,29 @@
         </div>
       </section>
       
-    /* Whatsapp CTA button*/
+    <!-- CTA Buttons -->
 
         <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
-    class="fixed bottom-5 right-5 z-50 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition">
-    <i class="fab fa-whatsapp text-4xl"></i>
-        </a>
+        class="fixed bottom-5 right-5 z-50 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300">
+        <i class="fab fa-whatsapp text-4xl animate-heartbeat"></i>
+    </a>
+
+    <a href="tel:+919876543210" 
+   class="fixed bottom-24 right-5 z-50 flex items-center gap-2 bg-gray-700 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 group">
+   
+   <!-- Phone icon with heartbeat animation -->
+   <i class="fas fa-phone text-2xl animate-heartbeat"></i>
+   
+   <!-- "Call Us" text that appears on hover -->
+   <span class="text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+   </span>
+   <p>Call Us</p>
+
+   <!-- Optional: Phone number that appears on hover -->
+   <!-- <span class="text-xs opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+      +91 98765 43210
+   </span> -->
+</a>
 
 
 
